@@ -7,12 +7,17 @@ import {ConvocontrollerService} from '../convocontroller.service';
   styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent implements OnInit {
-
+ // private ReplyText: string;
   constructor(private Convocontroller: ConvocontrollerService ) { }
 
-  private OnReply (ReplyText){
-  
+  private OnReply(ReplyText: string){
+    if (ReplyText==""){}else{
+      console.log(ReplyText);
+      this.Convocontroller.sendReplyText(ReplyText, true);
+      ReplyText = "Type Here";
+    }
   }
+
   ngOnInit() {
   }
 

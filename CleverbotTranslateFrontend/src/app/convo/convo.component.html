@@ -1,12 +1,16 @@
 
-<div class="card">
-  <div class="card-block ">
-    This is some text within a card block.
-    <time></time>
+  <div class="card">
+    <div class="card-block">
+      This should be responding
+      <time></time>
+    </div>
+
+ <div *ngFor="let reply of replyList" class="card text-right">
+  <!-- <div class="card text-right"> -->
+    <div class="card-block">
+      {{reply.replyText}}
+      <p> {{reply.today | date:'shortTime'}} </p>
+    </div>
   </div>
-</div>
-<div class="card text-right">
-  <div class="card-block ">
-    This is responsing convo
-  </div>
-</div>
+
+
