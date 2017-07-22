@@ -5,18 +5,21 @@ import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
+import { ConvoComponent } from './convo/convo.component';
+import {ConvocontrollerService} from './convocontroller.service';
 
 @NgModule({
   declarations: [
     AppComponent,
-    NavbarComponent
+    NavbarComponent,
+    ConvoComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule
   ],
-  providers: [],
+  providers: [ConvocontrollerService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
